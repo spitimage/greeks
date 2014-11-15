@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options Greeks</title>
+    <meta name="author" content="Aaron Nielsen"/>
+    <meta name="description" content="Options Greeks Visualizations"/>
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="plots.js"></script>
+    <style>
+        body {
+            font: 10px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+
+        .line {
+            fill: none;
+            stroke-width: 1.5px;
+        }
+
+        .title {
+            font-size: 1.2em;
+            text-anchor: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12"><h1 class="text-center">Mibian Calculations</h1></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-xs-12" id="d20"></div>
+        <div class="col-sm-4 col-xs-12" id="d40"></div>
+        <div class="col-sm-4 col-xs-12" id="d60"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-xs-12" id="g20"></div>
+        <div class="col-sm-4 col-xs-12" id="g40"></div>
+        <div class="col-sm-4 col-xs-12" id="g60"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-xs-12" id="t20"></div>
+        <div class="col-sm-4 col-xs-12" id="t40"></div>
+        <div class="col-sm-4 col-xs-12" id="t60"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-xs-12" id="v20"></div>
+        <div class="col-sm-4 col-xs-12" id="v40"></div>
+        <div class="col-sm-4 col-xs-12" id="v60"></div>
+    </div>
+</div>
+
+<script>
+    plot('#d20', 'mibian/Delta20.json');
+    plot('#d40', 'mibian/Delta40.json');
+    plot('#d60', 'mibian/Delta60.json');
+
+    plot('#g20', 'mibian/Gamma20.json');
+    plot('#g40', 'mibian/Gamma40.json');
+    plot('#g60', 'mibian/Gamma60.json');
+
+    plot('#t20', 'mibian/Theta20.json');
+    plot('#t40', 'mibian/Theta40.json');
+    plot('#t60', 'mibian/Theta60.json');
+
+    plot('#v20', 'mibian/Vega20.json');
+    plot('#v40', 'mibian/Vega40.json');
+    plot('#v60', 'mibian/Vega60.json');
+</script>
+
+</body>
+</html>
