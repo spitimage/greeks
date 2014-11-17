@@ -1,6 +1,6 @@
 function plot(selection, filename, viewWidth) {
 
-    viewWidth = viewWidth || 300;
+    viewWidth = viewWidth || 500;
     var viewHeight = viewWidth * 3 / 4;
     var margin = {top: 20, right: 20, bottom: 30, left: 50},
         width = viewWidth - margin.left - margin.right,

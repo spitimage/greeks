@@ -44,31 +44,88 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-xs-12"><h1 class="text-center">Mibian Calculations</h1></div>
+        <div class="col-sm-6 col-xs-12"><h1 class="text-center">Quantlib</h1></div>
+        <div class="col-sm-6 col-xs-12"><h1 class="text-center">Mibian</h1></div>
     </div>
+
     <div class="row">
-        <div class="col-sm-4 col-xs-12" id="d20"></div>
-        <div class="col-sm-4 col-xs-12" id="d40"></div>
-        <div class="col-sm-4 col-xs-12" id="d60"></div>
+        <div class="col-sm-6 col-xs-12" id="qd20"></div>
+        <div class="col-sm-6 col-xs-12" id="d20"></div>
     </div>
+
     <div class="row">
-        <div class="col-sm-4 col-xs-12" id="g20"></div>
-        <div class="col-sm-4 col-xs-12" id="g40"></div>
-        <div class="col-sm-4 col-xs-12" id="g60"></div>
+        <div class="col-sm-6 col-xs-12" id="qd40"></div>
+        <div class="col-sm-6 col-xs-12" id="d40"></div>
     </div>
+
     <div class="row">
-        <div class="col-sm-4 col-xs-12" id="t20"></div>
-        <div class="col-sm-4 col-xs-12" id="t40"></div>
-        <div class="col-sm-4 col-xs-12" id="t60"></div>
+        <div class="col-sm-6 col-xs-12" id="qd60"></div>
+        <div class="col-sm-6 col-xs-12" id="d60"></div>
     </div>
+
     <div class="row">
-        <div class="col-sm-4 col-xs-12" id="v20"></div>
-        <div class="col-sm-4 col-xs-12" id="v40"></div>
-        <div class="col-sm-4 col-xs-12" id="v60"></div>
+        <div class="col-sm-6 col-xs-12" id="qg20"></div>
+        <div class="col-sm-6 col-xs-12" id="g20"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qg40"></div>
+        <div class="col-sm-6 col-xs-12" id="g40"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qg60"></div>
+        <div class="col-sm-6 col-xs-12" id="g60"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qt20"></div>
+        <div class="col-sm-6 col-xs-12" id="t20"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qt40"></div>
+        <div class="col-sm-6 col-xs-12" id="t40"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qt60"></div>
+        <div class="col-sm-6 col-xs-12" id="t60"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qv20"></div>
+        <div class="col-sm-6 col-xs-12" id="v20"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qv40"></div>
+        <div class="col-sm-6 col-xs-12" id="v40"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qv60"></div>
+        <div class="col-sm-6 col-xs-12" id="v60"></div>
     </div>
 </div>
 
 <script>
+    plot('#qd20', 'quantlib/Delta20.json');
+    plot('#qd40', 'quantlib/Delta40.json');
+    plot('#qd60', 'quantlib/Delta60.json');
+
+    plot('#qg20', 'quantlib/Gamma20.json');
+    plot('#qg40', 'quantlib/Gamma40.json');
+    plot('#qg60', 'quantlib/Gamma60.json');
+
+    plot('#qt20', 'quantlib/Theta20.json');
+    plot('#qt40', 'quantlib/Theta40.json');
+    plot('#qt60', 'quantlib/Theta60.json');
+
+    plot('#qv20', 'quantlib/Vega20.json');
+    plot('#qv40', 'quantlib/Vega40.json');
+    plot('#qv60', 'quantlib/Vega60.json');
+
     plot('#d20', 'mibian/Delta20.json');
     plot('#d40', 'mibian/Delta40.json');
     plot('#d60', 'mibian/Delta60.json');
@@ -84,6 +141,7 @@
     plot('#v20', 'mibian/Vega20.json');
     plot('#v40', 'mibian/Vega40.json');
     plot('#v60', 'mibian/Vega60.json');
+
 </script>
 
 </body>
