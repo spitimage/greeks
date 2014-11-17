@@ -47,7 +47,18 @@
         <div class="col-sm-6 col-xs-12"><h1 class="text-center">Quantlib</h1></div>
         <div class="col-sm-6 col-xs-12"><h1 class="text-center">Mibian</h1></div>
     </div>
-
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qp20"></div>
+        <div class="col-sm-6 col-xs-12" id="p20"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qp40"></div>
+        <div class="col-sm-6 col-xs-12" id="p40"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12" id="qp60"></div>
+        <div class="col-sm-6 col-xs-12" id="p60"></div>
+    </div>
     <div class="row">
         <div class="col-sm-6 col-xs-12" id="qd20"></div>
         <div class="col-sm-6 col-xs-12" id="d20"></div>
@@ -126,6 +137,10 @@
     plot('#qv40', 'quantlib/Vega40.json');
     plot('#qv60', 'quantlib/Vega60.json');
 
+    plot('#qp20', 'quantlib/Price20.json');
+    plot('#qp40', 'quantlib/Price40.json');
+    plot('#qp60', 'quantlib/Price60.json');
+
     plot('#d20', 'mibian/Delta20.json');
     plot('#d40', 'mibian/Delta40.json');
     plot('#d60', 'mibian/Delta60.json');
@@ -141,6 +156,10 @@
     plot('#v20', 'mibian/Vega20.json');
     plot('#v40', 'mibian/Vega40.json');
     plot('#v60', 'mibian/Vega60.json');
+
+    plot('#p20', 'mibian/Price20.json');
+    plot('#p40', 'mibian/Price40.json');
+    plot('#p60', 'mibian/Price60.json');
 
 </script>
 
